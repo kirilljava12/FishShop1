@@ -37,6 +37,8 @@
                 <p><img th:src="${cl.getUrl()}" height="300px" width="450px"></img></p>
                 <a class="btn btn-danger" th:href="'/admin/checkItems/deleteItem/'+ ${cl.getId()}">Удалить товар</a>
                 <p></p>
+                <a class="btn btn-danger" th:href="'/admin/checkItems/notActual/'+ ${cl.getId()}">Убрать с витрины</a>
+                <p></p>
                 <a class="btn btn-warning" th:href="'/admin/checkItems/editItem/'+ ${cl.getId()}">Редактировать товар</a>
             </div>
         </div>

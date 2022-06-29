@@ -1,6 +1,8 @@
 package com.example.fishshop1.controllers;
 
+import com.example.fishshop1.models.DiscModel;
 import com.example.fishshop1.models.ItemModel;
+import com.example.fishshop1.repos.DiscRepo;
 import com.example.fishshop1.repos.ItemRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,12 +16,13 @@ import java.util.List;
 @RequestMapping("/")
 public class MainController {
     @Autowired
-    ItemRepo itemRepo;
+    DiscRepo discRepo;
 
     @GetMapping
     public String getMainPage(Model model){
-        List<ItemModel> list = itemRepo.findAll();
-        model.addAttribute("items", list);
+        DiscModel discModel = new DiscModel();
+        List<DiscModel> discModels = (List<DiscModel>) discRepo.findAll();
+        model.addAttribute("disc", discModels);
         return "index";
     }
 }

@@ -30,21 +30,11 @@
 </div>
 <form method="post">
     <div class="form-group">
-         <div class="col-sm-10">
-        <input type="text" class="form-control" name="title" placeholder="Введите название товара">
-             <input type="text"  class="form-control" name="disc" placeholder="Введите описание товара">
-             <input type="text"  class="form-control" name="photoUrl" placeholder="Введите фото описания товара">
-             <select class="form-select" aria-label="Default select example" name="type">
-                 <option>Охота</option>
-                 <option>Рыбалка</option>
-                 <option>Туризм</option>
-                 <option>Лодки</option>
-                 <option>Комплектующие для лодок</option>
-                 <option>Сухие пайки</option>
-             </select>
-             <p></p>
-             <button type="submit">Подтвердить</button>
-         </div>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="disc" placeholder="Введите описание бизнеса">
+            <button type="submit">Подтвердить</button>
+            <a th:href="'/detailitem/' + ${it.getId()}">Посмотреть подробнее</a>
+        </div>
     </div>
 
 </form>
