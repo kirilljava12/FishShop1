@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Blog Template for Bootstrap</title>
+    <title>Рыболовный магазин</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/blog/">
 
@@ -31,8 +31,8 @@
 <section class="jumbotron text-center" th:each="it:${item}">
     <div class="container">
         <h1 class="jumbotron-heading" th:text="${it.getTitle()}"></h1>
-       <p class="lead text-muted" th:text="${it.getDisc()}"></p>
         <img th:src="${it.getUrl()}" height="400px" width="450px" >
+        <p class="lead text-muted" th:text="${it.getDisc()}"></p>
     </div>
 </section>
 <div class="card mb-4 box-shadow">
